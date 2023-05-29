@@ -1,0 +1,534 @@
+/* style css */
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: "Poppins", sans-serif;
+}
+
+/* component class: start */
+.container {
+	margin: 0 auto;
+	max-width: 1280px;
+}
+
+.brand_logo {
+	color: #f79327;
+	font-family: "Pacifico", cursive;
+	font-size: 2em;
+	text-decoration: none;
+	user-select: none;
+}
+
+.header_link {
+	position: relative;
+	display: inline-block;
+	color: #ff6000;
+	font-size: 1.2em;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.header_link::after {
+	display: block;
+	content: "";
+	margin: 0 auto;
+	margin-top: 3px;
+	width: 50%;
+	border-bottom: 2px solid transparent;
+}
+
+.header_link:hover::after {
+	border-bottom: 2px solid #ff6000;
+}
+
+.hero_display {
+	position: relative;
+	height: 600px;
+	background-size: cover;
+	background-position: center;
+}
+
+.button_main {
+	color: #fff;
+	font-weight: 500;
+	text-decoration: none;
+	background-color: #040303;
+}
+
+.overflow_hidden {
+	overflow: hidden;
+}
+/* component class: end*/
+
+/* section header: start */
+.header {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.header .container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+	padding: 20px 15px;
+}
+
+.menu__item {
+	margin-right: 10px;
+}
+
+.menu__item:last-child {
+	margin-right: 0;
+}
+
+.header__brand {
+	text-align: center;
+}
+
+.header__ctas {
+	text-align: right;
+}
+
+.menu_item,
+.header__ctas__link {
+	transform: translateY(2px);
+}
+
+/* element menu hamburger: start */
+.menu_hamburger {
+	display: none;
+	visibility: hidden;
+}
+
+.menu_hamburger__toggle {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 30px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.menu_hamburger__toggle > span {
+	width: 100%;
+	height: 2px;
+	background-color: black;
+	transition: transform 0.3s ease;
+}
+
+.menu_hamburger__toggle--active > span:nth-child(2) {
+	opacity: 0;
+}
+
+.menu_hamburger__toggle--active > span:nth-child(1) {
+	transform: translateY(6px) rotate(-45deg);
+}
+
+.menu_hamburger__toggle--active > span:nth-child(3) {
+	transform: translateY(-6px) rotate(45deg);
+}
+
+.menu_hamburger__content {
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	visibility: hidden;
+	padding: 50px;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	transform: translateX(-100%);
+}
+
+.menu_hamburger__content--active {
+	display: block;
+	visibility: visible;
+	transform: translateX(0);
+}
+
+.menu_hamburger__list {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	align-items: center;
+	padding: 50px 0;
+	width: 100%;
+}
+
+.menu_hamburger__list__item {
+	width: fit-content;
+}
+
+/* section header: end */
+
+/* section hero: start */
+.hero_main {
+	background-image: url("/images/hero__stardew-valley.jpg");
+}
+
+.hero_main__content {
+	position: absolute;
+	bottom: 50px;
+	padding: 10px 15px;
+	width: 100%;
+	max-width: 1024px;
+	color: #fff;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+.hero_main__heading {
+	margin-bottom: 10px;
+	font-size: 2.5em;
+	text-shadow: 2px 2px 3px #000;
+}
+
+.hero_main__text {
+	margin-bottom: 30px;
+	font-size: 1.2em;
+	text-shadow: 2px 2px 3px #000;
+	text-align: justify;
+	text-justify: distribute;
+}
+
+.hero_main__button {
+	padding: 10px 25px;
+	border-radius: 5px;
+}
+/* section hero: end */
+
+/* section hero video: start */
+.hero_video__iframe,
+.hero_video__poster {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.hero_video__poster {
+	z-index: 2;
+	background-image: url("/images/poster__stardew-valley.jpg");
+	background-size: cover;
+	background-position: bottom;
+	cursor: pointer;
+}
+
+.hero_video__play {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: inline-block;
+	padding: 20px;
+	border: 10px solid #fff;
+	border-radius: 50%;
+	box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.25);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.hero_video__play__triangle {
+	width: 0;
+	height: 0;
+	border-top: 17px solid transparent;
+	border-bottom: 17px solid transparent;
+	border-left: 35px solid #fff;
+	transform: translateX(10%);
+}
+/* section hero video: end */
+
+/* section game: start */
+.game {
+	padding: 50px 15px;
+}
+
+.game__content {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: 30px;
+}
+
+.game__header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.game__heading {
+	font-size: 1.8em;
+	font-weight: 500;
+}
+
+.game__text {
+	font-size: 1.2em;
+}
+
+.game__card__list {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 20px;
+}
+
+.game__card__list__item img {
+	border-radius: 10px;
+	aspect-ratio: 1 / 1;
+}
+
+.game__card__list__item {
+	width: 100%;
+}
+
+.game__link {
+	display: block;
+	width: fit-content;
+	margin-left: auto;
+	padding: 10px 25px;
+	border-radius: 5px;
+	text-align: center;
+}
+/* section game: end */
+
+/* section game ctas: start */
+.game_ctas {
+	background-image: url("/images/ctas__a-short-hike.jpg");
+}
+
+.game_ctas__button {
+	position: absolute;
+	left: 50%;
+	bottom: 50px;
+	padding: 15px 30px;
+	border-radius: 10px;
+	font-size: 1.5em;
+	transform: translateX(-50%);
+}
+/* section game ctas: end */
+
+/* section team: start */
+.team {
+	padding: 50px 0;
+}
+
+.team__header {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.team__heading {
+	font-size: 1.8em;
+}
+
+.team__text {
+	font-size: 1.2em;
+}
+
+.team__cards {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	gap: 20px;
+	max-width: 640px;
+}
+
+.team__card {
+	width: fit-content;
+	text-align: center;
+}
+
+.team__card__image {
+	margin: 0 auto;
+	margin-bottom: 5px;
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border: 5px solid #f79327;
+	border-radius: 50%;
+}
+/* section team: end */
+
+/* section game: start */
+.hero_games {
+	background-image: url("/images/game__fez.png");
+}
+
+.hero_games__content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 10px 15px;
+	width: 100%;
+	max-width: 1024px;
+	color: #fff;
+	text-align: center;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.hero_games__heading {
+	margin-bottom: 10px;
+	font-size: 2.5em;
+	text-shadow: 2px 2px 3px #000;
+}
+
+.hero_main__text {
+	margin-bottom: 30px;
+	font-size: 1.2em;
+	text-shadow: 2px 2px 3px #000;
+	text-align: justify;
+	text-justify: distribute;
+}
+/* section game: end */
+
+/* section game list: start */
+.game_list {
+	padding: 75px 15px;
+}
+
+.game_list__card {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+	justify-content: center;
+	gap: 35px;
+}
+
+.game_list__item {
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.game_list__item__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: filter 0.5s;
+}
+
+.game_list__item__content {
+	position: absolute;
+	bottom: 0;
+	visibility: hidden;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding: 15px;
+	background-color: #fff;
+	transition: transform 0.5s;
+	transform: translateY(100%);
+}
+
+.game_list__item:hover {
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.game_list__item:hover .game_list__item__image {
+	filter: blur(2px);
+}
+
+.game_list__item:hover .game_list__item__content {
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.game_list__item__title {
+	margin-bottom: 10px;
+	color: #f79327;
+	font-size: 0.8em;
+}
+
+.game_list__item__text {
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 0.7em;
+}
+/* section game list: end */
+
+/* section footer: start */
+.footer {
+	color: #fff;
+	background-color: #040303;
+	padding: 0 15px;
+	padding-top: 50px;
+}
+
+.footer__content {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 1fr;
+	gap: 30px;
+}
+
+.footer__about__text {
+	font-size: 0.9em;
+	margin-bottom: 20px;
+}
+
+.footer__social {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.footer__social__item {
+	padding: 10px;
+	border-radius: 50%;
+	background-color: #f79327;
+	opacity: 0.8;
+	transition: all 0.3s;
+}
+
+.footer__social__item:hover {
+	opacity: 1;
+}
+
+.footer__social__item img {
+	width: 19px;
+	height: 19px;
+}
+
+/* element footer menu: start */
+.footer__menu__heading {
+	font-size: 1.2em;
+	font-weight: 500;
+}
+
+.footer__brand,
+.footer__menu__heading {
+	margin-bottom: 20px;
+	height: 50px;
+	line-height: 50px;
+}
+
+.footer__menu__link {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 5px;
+}
+
+.footer__menu__link__item {
+	display: block;
+	width: fit-content;
+	padding-bottom: 3px;
+	border: 2px solid transparent;
+	color: #fff;
+	text-decoration: none;
+}
+
+.footer__menu__link__item:hover {
+	border-bottom: 2px solid #fff;
+}
+/* element footer menu: end */
+
+.footer__copyright {
+	padding: 20px 0;
+	padding-top: 50px;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 0.9em;
+	text-align: center;
+}
+/* section footer: end */

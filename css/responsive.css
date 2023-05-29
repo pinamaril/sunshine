@@ -1,0 +1,97 @@
+/* responsive for tablet and mini dekstop: start */
+@media screen and (max-width: 1024px) {
+	/* section header: start */
+	.brand_logo {
+		font-size: 1.8em;
+	}
+
+	.header_link {
+		font-size: 1.1em;
+	}
+	/* section header: end */
+}
+/* responsive for tablet and mini dekstop: end */
+
+/* responsive for smartphone and smartphone landscape: start */
+@media screen and (max-width: 768px) {
+	/* section header: start */
+	.menu {
+		display: none;
+		visibility: hidden;
+	}
+
+	.menu_hamburger {
+		display: block;
+		visibility: visible;
+	}
+
+	.header__ctas {
+		display: none;
+		visibility: hidden;
+	}
+	/* section header: end */
+
+	/* section hero main & hero game: start */
+	.hero_main__heading,
+	.hero_game__heading {
+		font-size: 2em;
+	}
+
+	.hero_main__text,
+	.hero_game__text {
+		font-size: 1em;
+	}
+	/* section hero main & hero game: end */
+
+	/* section game: start */
+	.game__content {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.game__card__list {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.game__link {
+		width: 50%;
+	}
+	/* section game: end */
+
+	/* section game list: start */
+	.game_list__item {
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+	}
+
+	.game_list__item__content {
+		visibility: visible;
+		transform: translateY(0);
+	}
+	/* section game list: end */
+
+	/* section footer: start */
+	.footer__content {
+		grid-template-columns: 1fr 1fr;
+	}
+	/* section footer: end */
+}
+/* responsive for smartphone and smartphone landscape: end */
+
+/* responsive for smartphone: start  */
+@media screen and (max-width: 640px) {
+	/* section game: start */
+	.game__content {
+		grid-template-columns: 1fr;
+	}
+
+	.game__link {
+		width: 100%;
+	}
+	/* section game: end */
+
+	/* section footer: start */
+	.footer__content {
+		grid-template-columns: 1fr;
+	}
+	/* section footer: end */
+}
+/* responsive for smartphone: end  */
